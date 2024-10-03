@@ -54,38 +54,38 @@ async function getSession1(){
   // console.log(session)
 }
 async function mslogin(){
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'azure',
   })
   console.log(data,error?.message);
 }
 async function googlelogin(){
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'google',
   })
   console.log(data,error?.message);
 }
 async function githublogin(){
   if(import.meta.server) return;
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'github',
   })
   console.log(data,error?.message);
 }
 async function discordlogin(){
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'discord',
   })
   console.log(data,error?.message);
 }
 async function Zoomlogin(){
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'zoom',
   })
   console.log(data,error?.message);
 }
 async function gitlabogin(){
-  const {data, error} = await supabase.auth.signInWithOAuth({
+  const {data, error} = await supabase.auth.linkIdentity({
     provider:'gitlab',
   })
   console.log(data,error?.message);
