@@ -32,7 +32,7 @@ async function sign(){
     email: email.value,
     password: pass.value,
     options: {
-      redirectTo: 'http://localhost:3000/',
+      redirectTo: 'https://supabasetest-amber.vercel.app',
       data: {
         first_name: 'John',
         age: 27,
@@ -58,7 +58,7 @@ async function mslogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'azure',
     options:{
-      redirectTo:'http://localhost:3000/',
+      redirectTo:'https://supabasetest-amber.vercel.app',
     }
   })
   console.log(data,error?.message);
@@ -67,7 +67,7 @@ async function googlelogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'google',
     options:{
-      redirectTo:'http://localhost:3000/',
+      redirectTo:'https://supabasetest-amber.vercel.app',
     }
   })
   console.log(data,error?.message);
@@ -77,7 +77,7 @@ async function githublogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'github',
     options:{
-      redirectTo:'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
+      redirectTo:'https://supabasetest-amber.vercel.app',
     }
   })
   console.log(data,error?.message);
@@ -86,7 +86,7 @@ async function discordlogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'discord',
     options:{
-      redirectTo:"/auth/v1/callback"
+      redirectTo:"https://supabasetest-amber.vercel.app"
     }
   })
   console.log(data,error?.message);
@@ -102,7 +102,7 @@ async function gitlabogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'gitlab',
     options:{
-      redirectTo:'http://localhost:3000/',
+      redirectTo:'https://supabasetest-amber.vercel.app',
     }
   })
   console.log(data,error?.message);
