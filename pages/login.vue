@@ -32,7 +32,6 @@ async function sign(){
     email: email.value,
     password: pass.value,
     options: {
-      redirectTo: 'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
       data: {
         first_name: 'John',
         age: 27,
@@ -57,18 +56,12 @@ async function getSession1(){
 async function mslogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'azure',
-    options:{
-      redirectTo:'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
-    }
   })
   console.log(data,error?.message);
 }
 async function googlelogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'google',
-    options:{
-      redirectTo:'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
-    }
   })
   console.log(data,error?.message);
 }
@@ -76,37 +69,24 @@ async function githublogin(){
   if(import.meta.server) return;
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'github',
-    options:{
-      redirectTo:'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
-    }
   })
   console.log(data,error?.message);
 }
 async function discordlogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'discord',
-    options:{
-      redirectTo:"https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback"
-    }
   })
   console.log(data,error?.message);
 }
 async function Zoomlogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'zoom',
-    options:{
-      redirectTo:"https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback"
-    }
-
   })
   console.log(data,error?.message);
 }
 async function gitlabogin(){
   const {data, error} = await supabase.auth.signInWithOAuth({
     provider:'gitlab',
-    options:{
-      redirectTo:'https://techczjxwjhgdhoesxqt.supabase.co/auth/v1/callback',
-    }
   })
   console.log(data,error?.message);
 }
