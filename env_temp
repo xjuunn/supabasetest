@@ -1,0 +1,3 @@
+GITHUB_TOKEN=''
+
+HTTP_PROXY='http://localhost:7897'

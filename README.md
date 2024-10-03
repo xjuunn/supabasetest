@@ -1,0 +1,20 @@
+# Renioo
+
+* Nuxt3
+* Vue3
+* Pinia
+* Tailwind
+* DaisyUI
+* I18n
+* VueUse
+* Eslint
+* nuxt-anime
+* nuxt/content
+* nuxt/image
+* Theme-change
+* markdown-it
+* peerjs
+* tailwindcss/container-queries
+* Sass
+* Echarts
+* Axios
